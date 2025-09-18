@@ -1,0 +1,129 @@
+Microsoft Windows [Version 10.0.22631.5189]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DCSuser\Desktop\019\fu>git init
+Reinitialized existing Git repository in C:/Users/DCSuser/Desktop/019/fu/.git/
+
+C:\Users\DCSuser\Desktop\019\fu>git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+C:\Users\DCSuser\Desktop\019\fu>git checkout -b test
+Switched to a new branch 'test'
+
+C:\Users\DCSuser\Desktop\019\fu>git add .
+
+C:\Users\DCSuser\Desktop\019\fu>git status
+On branch test
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   aa.txt
+        new file:   as.txt
+
+
+C:\Users\DCSuser\Desktop\019\fu>git commit -m "add files"
+[test (root-commit) 6a814bd] add files
+ 2 files changed, 1 insertion(+)
+ create mode 100644 aa.txt
+ create mode 100644 as.txt
+
+C:\Users\DCSuser\Desktop\019\fu>git push
+fatal: The current branch test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\DCSuser\Desktop\019\fu>git push --set-upstream origin test
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 259 bytes | 259.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Dinujaya-Senanayake/fu.git
+ * [new branch]      test -> test
+branch 'test' set up to track 'origin/test'.
+
+C:\Users\DCSuser\Desktop\019\fu>git status
+On branch test
+Your branch is up to date with 'origin/test'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   as.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\DCSuser\Desktop\019\fu>git add .
+
+C:\Users\DCSuser\Desktop\019\fu>git status
+On branch test
+Your branch is up to date with 'origin/test'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   as.txt
+
+
+C:\Users\DCSuser\Desktop\019\fu>
+C:\Users\DCSuser\Desktop\019\fu>git commit -m "binupata ariya"
+[test bc80da8] binupata ariya
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\DCSuser\Desktop\019\fu>git push -u origin test
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Dinujaya-Senanayake/fu.git
+   6a814bd..bc80da8  test -> test
+branch 'test' set up to track 'origin/test'.
+
+C:\Users\DCSuser\Desktop\019\fu>git checkout -b dev
+Switched to a new branch 'dev'
+
+C:\Users\DCSuser\Desktop\019\fu>git status
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   as.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\DCSuser\Desktop\019\fu>git add .
+
+C:\Users\DCSuser\Desktop\019\fu>git commit -m "binupa mata ariya"
+[dev e87f38c] binupa mata ariya
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\DCSuser\Desktop\019\fu>git push origin -u dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/Dinujaya-Senanayake/fu/pull/new/dev
+remote:
+To https://github.com/Dinujaya-Senanayake/fu.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+C:\Users\DCSuser\Desktop\019\fu>
